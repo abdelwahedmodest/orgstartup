@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="home-container">
+        <header class="home-header">
+            <div class="header-content">
+                <div class="login-register">
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'accounts:logout' %}" class="btn btn-link">Logout</a>
+                    {% else %}
+                        <a href="{% url 'accounts:signup' %}" class="btn btn-link">Sign Up</a>
+                        <a href="{% url 'accounts:login' %}" class="btn btn-link">Login</a>
+                    {% endif %}
+                </div>
+                <div class="logo">
+                    <img src="{% static 'images/partoo-logo.png' %}" alt="Partoo Logo">
+                </div>
+                <h1 class="main-title">our team</h1>
+            </div>
+        </header>
+
+        <main class="team-main">
+            <div class="team-structure">
+                <div class="team-row top-row">
+                    <div class="team-member mexico">
+                        <img src="{% static 'images/member1.jpg' %}" alt="Mexico">
+                        <span>Mexico</span>
+                    </div>
+                    <div class="team-member india">
+                        <img src="{% static 'images/member2.jpg' %}" alt="India">
+                        <span>India</span>
+                    </div>
+                    <div class="team-member france">
+                        <img src="{% static 'images/member3.jpg' %}" alt="France">
+                        <span>France</span>
+                    </div>
+                    <div class="team-member spain">
+                        <img src="{% static 'images/member4.jpg' %}" alt="Spain">
+                        <span>Spain</span>
+                    </div>
+                    <div class="team-member italy">
+                        <img src="{% static 'images/member5.jpg' %}" alt="Italy">
+                        <span>Italy</span>
+                    </div>
+                    <div class="team-member brazil">
+                        <img src="{% static 'images/member6.jpg' %}" alt="Brazil">
+                        <span>Brazil</span>
+                    </div>
+                    <div class="team-member internat1">
+                        <img src="{% static 'images/member7.jpg' %}" alt="Internat.">
+                        <span>Internat.</span>
+                    </div>
+                </div>
+
+                <div class="team-row second-row">
+                    <div class="team-group growth">
+                        <h2>GROWTH TEAM</h2>
+                    </div>
+                    <div class="team-group customer">
+                        <h2>CUSTOMER TEAM</h2>
+                    </div>
+                    <div class="team-group tech">
+                        <h2>TECH TEAM</h2>
+                    </div>
+                    <div class="team-group strat">
+                        <h2>STRAT TEAM</h2>
+                    </div>
+                </div>
+
+                <div class="team-row third-row">
+                    <div class="team-box">
+                        <div class="team-section">
+                            <div class="team-member enterprise">
+                                <img src="{% static 'images/member8.jpg' %}" alt="Enterprise Sales">
+                                <span>Enterprise Sales</span>
+                            </div>
+                            <div class="team-member smbs">
+                                <img src="{% static 'images/member9.jpg' %}" alt="SMBs Sales">
+                                <span>SMBs Sales</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-box">
+                        <div class="team-section">
+                            <div class="team-member customer-care">
+                                <img src="{% static 'images/member10.jpg' %}" alt="Customer Care">
+                                <span>Customer Care</span>
+                            </div>
+                            <div class="team-member customer-success">
+                                <img src="{% static 'images/member11.jpg' %}" alt="Customer Success">
+                                <span>Customer Success</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-box">
+                        <div class="team-section">
+                            <div class="team-member engineers">
+                                <img src="{% static 'images/member12.jpg' %}" alt="Engineers">
+                                <span>Engineers</span>
+                            </div>
+                            <div class="team-member product">
+                                <img src="{% static 'images/member13.jpg' %}" alt="Product">
+                                <span>Product</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-box">
+                        <div class="team-section">
+                            <div class="team-member internat2">
+                                <img src="{% static 'images/member14.jpg' %}" alt="International Strat.">
+                                <span>International Strat.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-row fourth-row">
+                    <div class="team-box">
+                        <div class="team-section">
+                            <div class="team-member psm">
+                                <img src="{% static 'images/member15.jpg' %}" alt="PSM">
+                                <span>PSM</span>
+                            </div>
+                            <div class="team-member internat3">
+                                <img src="{% static 'images/member16.jpg' %}" alt="Internat.">
+                                <span>Internat.</span>
+                            </div>
+                            <div class="team-member france2">
+                                <img src="{% static 'images/member17.jpg' %}" alt="France.">
+                                <span>France.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-box">
+                        <div class="team-section">
+                            <div class="team-member smbs2">
+                                <img src="{% static 'images/member18.jpg' %}" alt="SMBs">
+                                <span>SMBs</span>
+                            </div>
+                            <div class="team-member onboarding">
+                                <img src="{% static 'images/member19.jpg' %}" alt="Onboarding">
+                                <span>Onboarding</span>
+                            </div>
+                            <div class="team-member ticketing">
+                                <img src="{% static 'images/member20.jpg' %}" alt="Ticketing">
+                                <span>Ticketing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-box">
+                        <div class="team-section">
+                            <div class="team-member international">
+                                <img src="{% static 'images/member21.jpg' %}" alt="International">
+                                <span>International</span>
+                            </div>
+                            <div class="team-member midmarket">
+                                <img src="{% static 'images/member22.jpg' %}" alt="Mid-market">
+                                <span>Mid-market</span>
+                            </div>
+                            <div class="team-member keyaccount">
+                                <img src="{% static 'images/member23.jpg' %}" alt="Key Account">
+                                <span>Key Account</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-box">
+                        <div class="team-section">
+                            <div class="team-member alliances">
+                                <img src="{% static 'images/member24.jpg' %}" alt="Alliances">
+                                <span>Alliances</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-row sixth-row">
+                    <div class="team-member end1">
+                        <img src="{% static 'images/member38.jpg' %}" alt="">
+                        <span></span>
+                    </div>
+                    <div class="team-member end2">
+                        <img src="{% static 'images/member39.jpg' %}" alt="">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="home-footer">
+            <p>&copy; 2025 My Company</p>
+        </footer>
+    </div>
+{% endblock %}

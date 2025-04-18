@@ -43,6 +43,9 @@ def logout(request):
 def profile(request):
     return render(request, 'accounts/profile.html')
 
+def home(request):
+    return render(request, 'home.html')
+
 def generate_org_chart_pdf(request):
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = 'attachment; filename="organizational_chart.pdf"'

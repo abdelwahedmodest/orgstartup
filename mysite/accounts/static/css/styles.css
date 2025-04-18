@@ -1,0 +1,229 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+.home-header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-register a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.main-title {
+    color: #333;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Team structure styles */
+.team-main {
+    padding: 20px;
+}
+
+.team-structure {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.team-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.team-member, .team-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.team-member img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+    border: 2px solid #ddd;
+}
+.team-member span {
+    font-size: 0.9em;
+    color: #555;
+    font-weight: bold;
+}
+
+.team-group h2 {
+    font-size: 1.1em;
+    margin: 0;
+    color: #333;
+}
+.team-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.team-section {
+    display: flex;
+    gap: 10px;
+}
+.end1, .end2 {
+   border-radius: 50%;
+   border: 2px solid #ddd;
+}
+.end1 img, .end2 img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: none;
+    margin-bottom: 0px;
+}
+/* Colors for team groups */
+.growth {
+    background-color: #f8d7da; 
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.customer {
+    background-color: #d4edda; 
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tech {
+    background-color: #cce5ff; 
+    color: #004085;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.strat {
+    background-color: #fff3cd; 
+    color: #856404;
+    padding: 10px;
+    border-radius: 5px;
+}
+/* Footer styles */
+.home-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+.top-row .team-member {
+    padding-top: 10px;
+}
+.team-row.top-row .team-member {
+    flex: 1; 
+}
+.team-row.second-row {
+    gap: 10px; 
+}
+
+.team-row.second-row .team-group {
+    flex: 1; 
+}
+/* Responsive design */
+@media (max-width: 768px) {
+    .team-row {
+        flex-wrap: wrap;
+    }
+
+    .team-member, .team-group {
+        flex: 1 1 100%;
+    }
+      .team-structure {
+        gap: 10px; 
+    }
+      .team-row.top-row .team-member {
+        flex-basis: 40%; 
+    }
+    .team-row.second-row {
+        gap: 5px; 
+    }
+
+    .team-row.second-row .team-group {
+        flex-basis: 45%; 
+    }
+       .team-box {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+      .team-section {
+        gap: 5px;
+         flex-wrap: wrap;
+    }
+    .team-member span {
+        font-size: 0.8em;
+    }
+
+    .team-group h2 {
+        font-size: 1em;
+    }
+}
+@media (max-width: 480px) {
+     .team-row.top-row .team-member {
+        flex-basis: 100%; 
+    }
+    .team-row.second-row .team-group {
+        flex-basis: 100%; 
+    }
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .login-register {
+        margin-bottom: 10px;
+    }
+}
