@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Profile</h2>
+    <p>Welcome, {{ user.username }}!</p>
+    <a href="{% url 'org-chart-pdf' %}"><button>Download Org Chart</button></a>
+{% endblock %}
